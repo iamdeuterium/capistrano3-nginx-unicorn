@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'capistrano3/nginx_unicorn/version'
 
 Gem::Specification.new do |gem|
-  gem.name          = "capistrano3-nginx_unicorn"
+  gem.name          = "capistrano3-nginx-unicorn"
   gem.version       = Capistrano3::NginxUnicorn::VERSION
   gem.authors       = ["Ivan Tkalin", "Oleg Bavaev"]
   gem.email         = ["itkalin@gmail.com", "jesoba7@gmail.com"]
