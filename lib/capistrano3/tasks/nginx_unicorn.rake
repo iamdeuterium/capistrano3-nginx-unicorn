@@ -50,10 +50,6 @@ namespace :nginx do
       execute "sudo /etc/init.d/nginx reload"
     end
   end
-
-  after "deploy:check", "nginx:setup"
-  after "deploy:finished", "nginx:reload"
-
 end
 
 namespace :unicorn do
@@ -69,9 +65,6 @@ namespace :unicorn do
       execute "sudo update-rc.d -f unicorn_#{fetch(:application)} defaults"
     end
   end
-
-  after "deploy:check", "unicorn:setup"
-
 end
 
 namespace :deploy do
