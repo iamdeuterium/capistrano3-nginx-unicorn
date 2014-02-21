@@ -88,8 +88,6 @@ task :logrotate do
   end
 end
 
-after "deploy:check", "logrotate"
-
 def template(template_name, target)
   config_file = "#{fetch(:templates_path)}/#{template_name}"
   # if no customized file, proceed with default
